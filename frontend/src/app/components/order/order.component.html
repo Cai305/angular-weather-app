@@ -1,0 +1,47 @@
+<div
+  class="bg-black h-screen flex flex-col md:flex-row md:justify-between md:bg-[url('/offerBg.png')] md:h-[70vh]"
+>
+  <div
+    class="flex-1 flex flex-col justify-center items-center text-center gap-8 p-6"
+  >
+    <h1 class="text-white text-5xl font-bold xl:text-6xl">
+      Delicious Burger &amp; French Fry
+    </h1>
+    <p class="text-white xl:text-xl">
+      Progressively simplify effective e-toilers and process-centric methods of
+      empowerment. Quickly pontificate parallel.
+    </p>
+    <span class="font-bold text-5xl text-yellow-300">
+
+      <div class="timer" *ngIf="(timeLeft$ | async) as t; else sorry">
+        {{t.daysToDday}} : {{t.hoursToDday}} : {{t.minutesToDday}} : {{t.secondsToDday}}
+      </div>
+
+      <ng-template #sorry>
+        Sorry, no special available...
+      </ng-template>
+
+    </span
+    ><button class="bg-red-500 text-white rounded-md py-3 px-6">
+      Order Now
+    </button>
+  </div>
+  <div class="flex-1 w-full relative md:h-full">
+    <img
+      alt=""
+      loading="lazy"
+      decoding="async"
+      data-nimg="fill"
+      class="object-contain"
+      sizes="100vw"
+      src="../../../assets/images/food1.png"
+      style="
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        inset: 0px;
+        color: transparent;
+      "
+    />
+  </div>
+</div>
